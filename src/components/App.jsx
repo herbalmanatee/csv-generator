@@ -18,9 +18,10 @@ class App extends React.Component {
   render () {
     return(
       <div>
-        <h1>Enter JSON DATA BELOW</h1>
-         <form tpye="submit" onSubmit={(event)=> this.handleSubmit(event, document.getElementById("json-input").value)}>
-           <textarea id="json-input" type="text"></textarea><br></br>
+        <h1>CSV Generator</h1>
+         <form tpye="submit" action="/" method="POST">
+           <label>JSON Data</label><br></br>
+           <textarea id="json-input" type="text" name="jsonData" required></textarea><br></br>
            <button type="submit">Submit</button>
          </form>
       </div>
@@ -30,3 +31,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// onSubmit={(event)=> this.handleSubmit(event, document.getElementById("json-input").value)/>
