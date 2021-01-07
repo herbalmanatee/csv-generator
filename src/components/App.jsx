@@ -10,9 +10,21 @@ class App extends React.Component {
     }
   }
 
+  handleSubmit (event, jsonData) {
+    event.preventDefault();
+    console.log(jsonData);
+  }
+
   render () {
     return(
-      <div>React App component Rendered</div>
+      <div>
+        <h1>Enter JSON DATA BELOW</h1>
+         <form tpye="submit" onSubmit={(event)=> this.handleSubmit(event, document.getElementById("json-input").value)}>
+           <textarea id="json-input" type="text"></textarea><br></br>
+           <button type="submit">Submit</button>
+         </form>
+      </div>
+
     );
   }
 }
