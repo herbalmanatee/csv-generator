@@ -19,7 +19,7 @@ class App extends React.Component {
     return(
       <div>
         <h1>CSV Generator</h1>
-         <form tpye="submit" action="/" method="POST">
+         <form tpye="submit" action="/" encType="application/json" method="POST">
            <label>JSON Data</label><br></br>
            <textarea id="json-input" type="text" name="jsonData" required></textarea><br></br>
            <button type="submit">Submit</button>
